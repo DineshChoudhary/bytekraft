@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Byte Kraft's Affiliate Bot</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px; color: #222; line-height: 1.7; }
+    h1 { font-size: 2rem; margin-bottom: 8px; }
+    h2 { margin-top: 36px; }
+    .updated { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+    footer { margin-top: 60px; font-size: 0.85rem; color: #888; border-top: 1px solid #eee; padding-top: 16px; }
+    a { color: #e60023; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: March 14, 2026</p>
+
+  <p>
+    This privacy policy applies to Byte Kraft's Affiliate Bot, a personal automation tool
+    operated by Byte Kraft at <strong>dineshchoudhary.github.io</strong>. This tool uses the
+    Pinterest API to post affiliate product pins to Byte Kraft's own Pinterest boards.
+  </p>
+
+  <h2>1. Scope</h2>
+  <p>
+    This is a single-user, personal-use tool. It is not a public application or service. It does
+    not have end users, user accounts, or a sign-up flow. All API access is scoped exclusively to
+    Byte Kraft's own Pinterest account.
+  </p>
+
+  <h2>2. Data Collected</h2>
+  <p>
+    This tool does not collect personal data from any third party. The only data handled is:
+  </p>
+  <ul>
+    <li><strong>Pinterest OAuth access token</strong> — stored locally in a <code>.env</code> file
+      on Byte Kraft's personal computer and used solely to authenticate API calls to Byte Kraft's
+      own Pinterest account.</li>
+    <li><strong>Amazon product data</strong> — product titles, prices, and images fetched from the
+      Amazon PA-API for the purpose of creating pin content. This data is not stored beyond the
+      duration of a pipeline run.</li>
+    <li><strong>Posted pin log</strong> — a local CSV file (<code>logs/posted.csv</code>) recording
+      which ASINs have been posted, used only for deduplication. This file stays on Byte Kraft's
+      local machine.</li>
+  </ul>
+
+  <h2>3. How Data Is Used</h2>
+  <p>
+    All data described above is used solely to automate the creation and posting of Amazon affiliate
+    product pins to Byte Kraft's personal Pinterest boards. It is not used for analytics, advertising
+    targeting, or any other purpose.
+  </p>
+
+  <h2>4. Data Retention</h2>
+  <ul>
+    <li>Pinterest access tokens are retained on Byte Kraft's local machine until manually revoked or deleted.</li>
+    <li>Product data (titles, prices, images) is used transiently during a pipeline run and not
+      persisted beyond that run.</li>
+    <li>Generated pin images are deleted immediately after being posted.</li>
+    <li>The posted-pin log CSV is retained indefinitely for deduplication purposes and is never
+      shared with any third party.</li>
+  </ul>
+
+  <h2>5. Data Sharing</h2>
+  <p>
+    No personal data is shared with any third party. Pins are posted to Pinterest via the official
+    Pinterest API under Byte Kraft's own account. Affiliate links are generated via the Amazon
+    Associates program and optionally routed through Geniuslink for geographic localization —
+    neither service receives any end-user personal data through this tool.
+  </p>
+
+  <h2>6. Third-Party Services</h2>
+  <p>This tool interacts with the following third-party APIs under their respective terms of service:</p>
+  <ul>
+    <li><a href="https://policy.pinterest.com/en/privacy-policy" target="_blank" rel="noopener">Pinterest</a> — for posting pins</li>
+    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ" target="_blank" rel="noopener">Amazon PA-API</a> — for product data</li>
+    <li><a href="https://geniuslink.com/privacy" target="_blank" rel="noopener">Geniuslink</a> (optional) — for affiliate link localization</li>
+  </ul>
+
+  <h2>7. Pinterest API Usage</h2>
+  <p>
+    This tool uses the Pinterest API solely to create pins on Byte Kraft's own Pinterest boards.
+    It does not read, store, or process data from any other Pinterest user's account.
+  </p>
+
+  <h2>8. Security</h2>
+  <p>
+    API credentials are stored in a local <code>.env</code> file that is excluded from version
+    control via <code>.gitignore</code>. No credentials or personal data are transmitted beyond
+    what is required for API authentication.
+  </p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>
+    If this policy changes materially, the updated date at the top of this page will be revised.
+    Since this is a personal tool with no public users, no active notification process is required.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    For any questions about this privacy policy or data handling, contact Byte Kraft at:<br />
+    <strong><a href="mailto:dinesh.sdch.au@gmail.com">dinesh.sdch.au@gmail.com</a></strong>
+  </p>
+
+  <footer>
+    <a href="/">← Back to home</a>
+  </footer>
+</body>
+</html>
